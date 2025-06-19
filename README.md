@@ -92,4 +92,4 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Created by [Your Name] as a learning exercise. Feedback and contributions are welcome.
+Created by Carlo Di Giuseppe as a learning exercise. Feedback and contributions are welcome.
