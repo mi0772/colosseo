@@ -19,7 +19,7 @@ typedef struct colosseo_t {
 colosseo_t colosseo_build(size_t capacity);
 void colosseo_reset(colosseo_t *colosseo);
 char* colosseo_checkpoint(colosseo_t* colosseo);
-void colosseo_reset_to_checkpoint(colosseo_t* colosseo, char* checkpoint);
+int colosseo_reset_to_checkpoint(colosseo_t* colosseo, char* checkpoint);
 char *colosseo_alloc(colosseo_t *colosseo, size_t size);
 char *colosseo_alloc_aligned(colosseo_t *colosseo, size_t size, int alignment);
 void colosseo_free(colosseo_t *colosseo);

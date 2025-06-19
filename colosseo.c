@@ -27,11 +27,13 @@ char *colosseo_checkpoint(colosseo_t *colosseo) {
     if (colosseo == NULL || !colosseo->valid) return NULL;
     return colosseo->start + colosseo->offset;
 }
-void colosseo_reset_to_checkpoint(colosseo_t *colosseo, char *checkpoint) {
-    if (colosseo == NULL || !colosseo->valid) return NULL;
+
+int colosseo_reset_to_checkpoint(colosseo_t *colosseo, char *checkpoint) {
+    if (colosseo == NULL || !colosseo->valid) return -1;
     if (colosseo->start <= checkpoint && checkpoint <= colosseo->end) {
         colosseo->offset = checkpoint - colosseo->start;
     }
+    return 0;
 }
 
 char *colosseo_alloc(colosseo_t *colosseo, size_t size) {

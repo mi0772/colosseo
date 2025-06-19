@@ -4,5 +4,5 @@ project(colosseo C)
 set(CMAKE_C_STANDARD 11)
 
 add_library(colosseo STATIC colosseo.c)
-add_executable(colosseo_main tests/main.c)
+add_executable(colosseo_main tests/test_colosseo.c)
 target_link_libraries(colosseo_main PRIVATE colosseo)
